@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: SpringAI
+  jpa:
+    hibernate:
+      ddl-auto: create
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  ai:
+    openai:
+      api-key: TU_API_KEY
+      chat:
+        options:
+          model: gpt-4o #gpt-3.5-turbo
+          temperature: 1.0
+          max-tokens: 200
