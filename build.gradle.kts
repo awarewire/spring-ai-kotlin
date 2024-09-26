@@ -29,6 +29,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.springframework.ai:spring-ai-ollama-spring-boot-starter")
     implementation("org.springframework.ai:spring-ai-openai-spring-boot-starter")
+    implementation("org.springframework.ai:spring-ai-pdf-document-reader")
     developmentOnly("org.springframework.boot:spring-boot-docker-compose")
     implementation("com.google.code.gson:gson:2.10")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
