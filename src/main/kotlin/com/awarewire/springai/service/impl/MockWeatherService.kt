@@ -1,15 +1,20 @@
 package com.awarewire.springai.service.impl
 
-class MockWeatherService : (MockWeatherService.Request) -> MockWeatherService.Response {
+import java.util.function.Function
 
-    enum class Unit { C, F }
+class MockWeatherService : Function<MockWeatherService.Request?, MockWeatherService.Response> {
+    enum class TemperatureUnit {
+        C, F
+    }
 
-    data class Request(val location: String, val unit: Unit)
+    @JvmRecord
+    data class Request(val location: String, val unit: TemperatureUnit)
 
-    data class Response(val temp: Double, val unit: Unit)
+    @JvmRecord
+    data class Response(val temp: Double, val unit: TemperatureUnit)
 
-    override fun invoke(request: Request): Response {
-        return Response(30.0, Unit.C)
+    override fun apply(request: Request?): Response {
+        return Response(30.0, TemperatureUnit.C)
     }
 }
 
