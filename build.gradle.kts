@@ -31,6 +31,7 @@ dependencies {
     implementation("org.springframework.ai:spring-ai-openai-spring-boot-starter")
     developmentOnly("org.springframework.boot:spring-boot-docker-compose")
     implementation("com.google.code.gson:gson:2.10")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
     runtimeOnly("org.postgresql:postgresql")
